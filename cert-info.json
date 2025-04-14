@@ -1,0 +1,12 @@
+{
+  "Country": "AU",
+  "State": "Victoria",
+  "Locality": "Melbourne",
+  "Organization": "My Company Pty Ltd",
+  "OrganizationalUnit": "IT",
+  "CommonName": "mycompany.local",
+  "Email": "admin@mycompany.local",
+  "KeyOut": "mycert.key",
+  "CertOut": "mycert.crt",
+  "Days": 365
+}
