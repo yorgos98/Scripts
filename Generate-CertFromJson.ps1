@@ -19,10 +19,11 @@ $opensslCmd = "openssl req -x509 -nodes -newkey rsa:2048 -keyout `"$($certInfo.K
 Write-Host "Running: $opensslCmd"
 Invoke-Expression $opensslCmd
 
-if (Test-Path $certInfo.KeyOut -and Test-Path $certInfo.CertOut) {
-    Write-Host "`n✅ Certificate and key successfully generated:"
+if ((Test-Path $certInfo.KeyOut) -and (Test-Path $certInfo.CertOut)) {
+    Write-Host "`nCertificate and key successfully generated:"
     Write-Host " - Key:  $($certInfo.KeyOut)"
     Write-Host " - Cert: $($certInfo.CertOut)"
 } else {
-    Write-Error "❌ Failed to generate certificate or key."
+    Write-Error "Failed to generate certificate or key."
 }
+
